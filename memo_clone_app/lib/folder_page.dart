@@ -11,11 +11,19 @@ class _Folder_PageState extends State<Folder_Page> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      child: CupertinoNavigationBar(
-        middle: Text('폴더', style: TextStyle(fontSize: 20, color: Colors.green)),
-        trailing: Text('편집', style: TextStyle(color: Colors.green)),
-        backgroundColor: Colors.white,
-      ),
-    );
+        child: CustomScrollView(
+      slivers: <Widget>[
+        CupertinoSliverNavigationBar(
+          largeTitle: Text('폴더',
+              style: TextStyle(
+                  fontStyle: FontStyle.normal, fontWeight: FontWeight.bold)),
+          trailing: Text('편집',
+              style: TextStyle(
+                  color: Colors.blueGrey,
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.bold)),
+        ),
+      ],
+    ));
   }
 }
