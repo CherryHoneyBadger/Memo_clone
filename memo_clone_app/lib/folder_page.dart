@@ -20,9 +20,12 @@ class _Folder_PageState extends State<Folder_Page> {
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
         ),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.edit),
-            color: Colors.green,
+          //편집 버튼
+          FlatButton(
+            child: Text(
+              '편집',
+              style: TextStyle(color: Colors.grey, fontSize: 17, fontWeight: FontWeight.bold),
+            ),
             onPressed: () {},
           ),
         ],
@@ -90,9 +93,6 @@ class _Folder_PageState extends State<Folder_Page> {
                           style: TextStyle(color: _color),
                         ),
                         onPressed: () {
-                          setState(() {
-                            //텍스트 필드에 내용이 있다면 글씨의 색이 변경된다.
-                          });
                           Navigator.of(context).pop();
                         },
                       )
