@@ -29,20 +29,34 @@ class _newFolder_PageState extends State<newFolder_Page> {
           ),
         ],
       ),
-      body: ListView.builder(
-          itemCount: 1,
-          itemBuilder: (BuildContext context, int i) {
-            if (i.isOdd) {
-              return new Divider(
-                color: Colors.black,
-              );
-            }
-            return Card(
-                child: ListTile(
-                    title: Text('메모'),
-                    trailing: Icon(Icons.chevron_right),
-                    onTap: () {}));
-          }),
+      body: Column(
+        children: <Widget>[
+          ListView.builder(
+              itemCount: 1,
+              itemBuilder: (BuildContext context, int i) {
+                if (i.isOdd) {
+                  return new Divider(
+                    color: Colors.black,
+                  );
+                }
+                return Card(
+                    child: ListTile(
+                        title: Text('메모'),
+                        trailing: Icon(Icons.chevron_right),
+                        onTap: () {}));
+              }),
+          SizedBox(
+            child: IconButton(
+              icon: Icon(Icons.attach_file),
+              iconSize: 30,
+              color: Colors.green,
+              onPressed: () {
+                //눌렀을시 행동
+              },
+            ),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(
           Icons.add,
@@ -51,14 +65,9 @@ class _newFolder_PageState extends State<newFolder_Page> {
         ),
         onPressed: () {},
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.white,
-        child: Container(
-          height: 50.0,
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );
+
     //버튼을 누를시 메모를 생성하거나 그림판등을 생성할수 있다.
   }
 }

@@ -24,7 +24,10 @@ class _Folder_PageState extends State<Folder_Page> {
           FlatButton(
             child: Text(
               '편집',
-              style: TextStyle(color: Colors.grey, fontSize: 17, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold),
             ),
             onPressed: () {},
           ),
@@ -52,7 +55,7 @@ class _Folder_PageState extends State<Folder_Page> {
                   }),
             );
           }),
-          //새로운 폴더를 추가하는 버튼
+      //새로운 폴더를 추가하는 버튼
       floatingActionButton: FloatingActionButton(
           child: Icon(
             Icons.add,
