@@ -1,4 +1,4 @@
-# memo_clone_app
+# First Flutter App Project
 ct.
 
 ## Getting Started
