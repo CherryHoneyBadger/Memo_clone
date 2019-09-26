@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:memo_clone_app/folder_page.dart';
 
 class newFolder_Page extends StatefulWidget {
   @override
@@ -12,8 +13,16 @@ class _newFolder_PageState extends State<newFolder_Page> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'new Sample Folder',
+          '메모 폴더',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
+        ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          color: Colors.green,
+          onPressed: () {
+            Navigator.pop(context);
+            
+          },
         ),
         actions: <Widget>[
           //편집 버튼
@@ -27,36 +36,34 @@ class _newFolder_PageState extends State<newFolder_Page> {
             ),
             onPressed: () {},
           ),
-        ],
-      ),
-      body: Column(
-        children: <Widget>[
-          ListView.builder(
-              itemCount: 1,
-              itemBuilder: (BuildContext context, int i) {
-                if (i.isOdd) {
-                  return new Divider(
-                    color: Colors.black,
-                  );
-                }
-                return Card(
-                    child: ListTile(
-                        title: Text('메모'),
-                        trailing: Icon(Icons.chevron_right),
-                        onTap: () {}));
-              }),
-          SizedBox(
+          Padding(
+            padding: const EdgeInsets.all(8.0),
             child: IconButton(
               icon: Icon(Icons.attach_file),
-              iconSize: 30,
               color: Colors.green,
-              onPressed: () {
-                //눌렀을시 행동
-              },
+              iconSize: 30,
+              onPressed: () {},
             ),
-          ),
+          )
         ],
       ),
+      body: ListView.builder(
+          itemCount: 2,
+          itemBuilder: (BuildContext context, int i) {
+            if (i.isOdd) {
+              return new Divider(
+                color: Colors.black,
+              );
+            }
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                  child: ListTile(
+                      title: Text('메모'),
+                      trailing: Icon(Icons.chevron_right),
+                      onTap: () {})),
+            );
+          }),
       floatingActionButton: FloatingActionButton(
         child: Icon(
           Icons.add,
@@ -65,7 +72,6 @@ class _newFolder_PageState extends State<newFolder_Page> {
         ),
         onPressed: () {},
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );
 
     //버튼을 누를시 메모를 생성하거나 그림판등을 생성할수 있다.
