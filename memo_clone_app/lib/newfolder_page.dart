@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:memo_clone_app/attachment_page.dart';
+import 'package:memo_clone_app/basic_memo_page.dart';
 import 'package:memo_clone_app/folder_page.dart';
 
 class newFolder_Page extends StatefulWidget {
@@ -21,7 +23,6 @@ class _newFolder_PageState extends State<newFolder_Page> {
           color: Colors.green,
           onPressed: () {
             Navigator.pop(context);
-            
           },
         ),
         actions: <Widget>[
@@ -42,7 +43,12 @@ class _newFolder_PageState extends State<newFolder_Page> {
               icon: Icon(Icons.attach_file),
               color: Colors.green,
               iconSize: 30,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Attachment_page()),
+                );
+              },
             ),
           )
         ],
@@ -70,7 +76,10 @@ class _newFolder_PageState extends State<newFolder_Page> {
           color: Colors.green,
           size: 40,
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => Basic_Memo_Page()));
+        },
       ),
     );
 
