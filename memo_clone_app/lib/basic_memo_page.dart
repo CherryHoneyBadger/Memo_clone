@@ -15,6 +15,13 @@ class _Basic_Memo_PageState extends State<Basic_Memo_Page> {
           '메모',
           style: TextStyle(color: Colors.green),
         ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          color: Colors.green,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         actions: <Widget>[
           FlatButton(
             child: Icon(
@@ -33,6 +40,7 @@ class _Basic_Memo_PageState extends State<Basic_Memo_Page> {
         ],
       ),
       body: TextField(
+        
         decoration: InputDecoration(
           border: InputBorder.none,
           focusColor: Colors.green,

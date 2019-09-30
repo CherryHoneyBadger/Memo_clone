@@ -67,7 +67,12 @@ class _newFolder_PageState extends State<newFolder_Page> {
                   child: ListTile(
                       title: Text('메모'),
                       trailing: Icon(Icons.chevron_right),
-                      onTap: () {})),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Basic_Memo_Page()));
+                      })),
             );
           }),
       floatingActionButton: FloatingActionButton(

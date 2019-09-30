@@ -15,14 +15,14 @@ class _Attachment_pageState extends State<Attachment_page> {
           title: Text(
             '첨부파일',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
+          ),automaticallyImplyLeading: false,
           actions: <Widget>[
             FlatButton(
               child: Text(
                 '완료',
                 style: TextStyle(
                     color: Colors.green,
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold),
               ),
               onPressed: () {
@@ -32,46 +32,38 @@ class _Attachment_pageState extends State<Attachment_page> {
           ],
         ),
         body: Center(
-          child: Column(children: <Widget>[
-            Center(
-                child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                        child: Column(children: <Widget>[
-                      Center(
-                        child: Container(
+          child: Container(
+            margin: const EdgeInsets.all(10.0),
+            width: 300.0,
+            height: 150.0,
+            child: Center(
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    child: Text(
+                      '첨부 파일 없음',
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey),
+                    ),
+                  ),
+                          Container(
                           child: Text(
-                            '첨부 파일 없음',
+                          '메모에 추가한 사지느 지도 및 기타 항목이',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700, color: Colors.grey),
+                          ),
+                          ),
+                          Container(
+                              child: Text(
+                            '여기에 나타납니다.',
                             style: TextStyle(
-                                fontSize: 40,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w700,
                                 color: Colors.grey),
-                          ),
-                        ),
-                      ),
-                      Center(
-                          child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          child: Text(
-                            '메모에 추가한 사지느 지도 및 기타 항목이',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700, color: Colors.grey),
-                          ),
-                        ),
-                      )),
-                      Center(
-                          child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                  child: Text(
-                                '여기에 나타납니다.',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.grey),
-                              )))),
-                    ])))),
-          ]),
+                          )),
+                        ]),
+            )),
         ));
   }
 }
