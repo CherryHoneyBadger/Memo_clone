@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:memo_clone_app/add_member_page.dart';
 
 class Basic_Memo_Page extends StatefulWidget {
   @override
@@ -28,7 +29,10 @@ class _Basic_Memo_PageState extends State<Basic_Memo_Page> {
               Icons.account_circle,
               color: Colors.green,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Add_Member_page()));
+            },
           ),
           FlatButton(
             child: Icon(
@@ -40,7 +44,6 @@ class _Basic_Memo_PageState extends State<Basic_Memo_Page> {
         ],
       ),
       body: TextField(
-        
         decoration: InputDecoration(
           border: InputBorder.none,
           focusColor: Colors.green,
