@@ -1,18 +1,12 @@
-# memo_clone_app
-ct.
+# Cupertino Icons
 
-## Getting Started
+This is an asset repo containing the default set of icon assets used by
+Flutter's [Cupertino widgets](https://github.com/flutter/flutter/tree/master/packages/flutter/lib/src/cupertino).
 
-플러터 클론 앱 프로젝트
+# Issues
 
-플러터를 이용한 아이폰 메모 앱 클론 프로젝트
+For issues, file directly in the [main Flutter repo](https://github.com/flutter/flutter).
 
+# Icons
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image map of glyphs](https://raw.githubusercontent.com/flutter/cupertino_icons/master/map.png)

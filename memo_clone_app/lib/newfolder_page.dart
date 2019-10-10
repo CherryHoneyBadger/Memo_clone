@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:memo_clone_app/attachment_page.dart';
 import 'package:memo_clone_app/basic_memo_page.dart';
-import 'package:memo_clone_app/folder_page.dart';
 
 class newFolder_Page extends StatefulWidget {
   @override

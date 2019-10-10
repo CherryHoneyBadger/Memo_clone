@@ -15,7 +15,7 @@ class _Attachment_pageState extends State<Attachment_page> {
           title: Text(
             '첨부파일',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),automaticallyImplyLeading: false,
+          ),automaticallyImplyLeading: false, //자동으로 뒤로가기 버튼을 만들지 않음
           actions: <Widget>[
             FlatButton(
               child: Text(
