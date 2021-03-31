@@ -1,7 +1,4 @@
-# First Flutter App Project
-ct.
-
-## Getting Started
+# My First Clone App
 
 플러터 클론 앱 프로젝트
 
